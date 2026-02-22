@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+
 import { ReactNode, FC } from "react";
 
 const geistSans = Geist({
@@ -23,6 +23,7 @@ type TChildren = { children: ReactNode };
 const RootLayout: FC<Readonly<TChildren>> = ({ children }) => (
   <html lang="en">
     <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <h2>Comming from the main Layout</h2>
       {children}
     </body>
   </html>
